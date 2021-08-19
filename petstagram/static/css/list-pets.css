@@ -1,0 +1,30 @@
+.list-pets {
+    text-align: center;
+}
+
+.list-pets .list-item {
+    width: 25%;
+    border: 1px solid rgba(0, 0, 0 , .1);
+    margin-right: 50px;
+}
+
+.pet-details {
+    padding: 15px;
+}
+
+.pet-info {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.pet-info, .pet-description {
+    margin-top: 10px;
+}
+
+img {
+    width: 100%;
+    height: 180px;
+}
+
+
+
