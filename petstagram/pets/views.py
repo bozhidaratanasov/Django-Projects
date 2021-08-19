@@ -46,7 +46,7 @@ def create_pet(request):
 
         return render(request, 'pet_create.html', context)
     else:
-        form = PetForm(request.POST)
+        form = PetForm(request.POST, request.FILES)
         if form.is_valid():
             pet = form.save()
             return redirect('list pets')
@@ -72,6 +72,7 @@ def edit_pet(request, pk):
     else:
         form = PetForm(
             request.POST,
+            request.FILES,
             instance=pet
         )
 
@@ -97,6 +98,7 @@ def delete_pet(request, pk):
         return render(request, 'pet_delete.html', context)
 
     else:
+        pet.image.delete()
         pet.delete()
         return redirect('list pets')
 
